@@ -1,0 +1,18 @@
+name: Test Workflow
+
+on:
+    - push
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+
+            - name: Run my action
+              id: my-action
+              uses: ./.github/actions/composite
+              with:
+                who-to-greet: Pavel
+            

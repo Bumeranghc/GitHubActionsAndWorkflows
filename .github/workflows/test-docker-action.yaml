@@ -12,7 +12,7 @@ jobs:
 
             - name: Run my action
               id: my-action
-              uses: ./
+              uses: ./.github/actions/docker
               with:
                 who-to-greet: Pavel
 
