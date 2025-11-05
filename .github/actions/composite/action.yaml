@@ -10,6 +10,7 @@ inputs:
 outputs:
   training_center:
     description: The training center
+    value: ${{ steps.my-action.outputs.training_center }}
 
 runs:
   using: composite
@@ -19,6 +20,7 @@ runs:
 
     - run: echo "training_center=Specter" >> $GITHUB_OUTPUT
       id: test-output
+      shell: bash
 
     - run: echo "The training center is ${{ steps.my-action.outputs.training_center }}"
       shell: bash
