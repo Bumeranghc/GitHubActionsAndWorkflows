@@ -10,8 +10,6 @@ on:
 
 jobs:
     test:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: Bumeranghc/GitHubDockerAction/.github/workflows/reusable-workflow.yaml@main
-              with:
-                who-to-greet: ${{ inputs.who-to-greet }}
+        uses: Bumeranghc/GitHubDockerAction/.github/workflows/reusable-workflow.yaml@main
+        with:
+            who-to-greet: ${{ inputs.who-to-greet }}
