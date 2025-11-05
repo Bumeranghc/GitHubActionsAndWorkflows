@@ -22,5 +22,5 @@ runs:
       id: test-output
       shell: bash
 
-    - run: echo "The training center is ${{ steps.my-action.outputs.training_center }}"
+    - run: echo "The training center is ${{ steps.test-output.outputs.training_center }}"
       shell: bash
