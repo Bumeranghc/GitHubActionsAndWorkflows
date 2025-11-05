@@ -1,0 +1,23 @@
+name: Test Reusable Workflow
+
+on:
+    workflow_call:
+        inputs:
+            who-to-greet:
+                required: true
+                type: string
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Hello, ${{ inputs.who-to-greet }}"
+              shell: bash
+
+            - run: echo "training_center=Specter" >> $GITHUB_OUTPUT
+              id: test-output
+              shell: bash
+
+            - run: echo "The training center is ${{ steps.test-output.outputs.training_center }}"
+              shell: bash
+            
