@@ -14,7 +14,7 @@ jobs:
               id: my-action
               uses: ./
               with:
-                who-to-great: Pavel
+                who-to-greet: Pavel
 
             - name: Output
               run: echo "Training Center is ${{ steps.my-action.outputs.training_center }}"

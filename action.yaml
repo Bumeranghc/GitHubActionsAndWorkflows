@@ -1,4 +1,4 @@
-name: Specter DOcker Action
+name: Specter Docker Action
 description: An example for Docker GitHub Action
 
 inputs:
@@ -15,4 +15,4 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.who-to-great }}
+    - ${{ inputs.who-to-greet }}
