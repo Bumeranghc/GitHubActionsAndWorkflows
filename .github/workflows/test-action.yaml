@@ -1,0 +1,21 @@
+name: Test Workflow
+
+on:
+    - push
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+
+            - name: Run my action
+              id: my-action
+              uses: ./
+              with:
+                who-to-great: Pavel
+
+            - name: Output
+              run: echo "Training Center is ${{ steps.my-action.outputs.training_center }}"
+            
