@@ -1,0 +1,15 @@
+name: Test Composite Action Workflow
+
+on:
+    - push
+
+jobs:
+    test:
+        runs-on: specter-runner
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+
+            - name: Run command
+              run:  echo "Hello, Specter"
+              shell: pwsh
