@@ -11,5 +11,5 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Run command
-              run:  echo "Hello, Specter"
+              run:  sleep 60; echo "Hello, Specter"
               shell: pwsh
