@@ -5,11 +5,11 @@ on:
 
 jobs:
     test:
-        runs-on: specter-runner
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
 
             - name: Run command
-              run:  sleep 60; echo "Hello, Specter"
-              shell: pwsh
+              run:  echo "Hello, Specter"
+              shell: bash
